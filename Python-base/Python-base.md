@@ -1,5 +1,5 @@
 
-2018/03/20
+Day01
 
 一、软件开发的常识
 
@@ -142,7 +142,7 @@ Unicode，可以支持中文
 
 
 
-2018/03/21
+Day02
 
 一、Python的编码规范
 
@@ -434,7 +434,7 @@ print("%d + %d = %d"%(a,b,a+b))
 
 			语句
 
-2018/03/22
+Day03
 
 一、运算符和表达式二
 
@@ -524,7 +524,7 @@ while 表达式1：
 
 		语句
 
-2018/03/23
+Day04
 
 一、list列表
 
@@ -660,11 +660,17 @@ list1.sort(reverse=True)
 
   浅拷贝：一改皆改，引用的同一块内存空间
 
-list1=list2
+list1 = list2	# 所有值的均是引用的地址
 
-深拷贝：copy：两个内存空间不同
+list1 = list2.copy() # number复制新值，其它为地址引用
 
-list1 = list2.copy()
+深拷贝：deepcopy：两个内存空间不同
+
+import copy
+
+list1 = copy.deepcopy(list2)
+
+对list中嵌套list有用，但对list中的tuple和string无效，其均为不可变的数据python不会创建新的进行额外管理
 
 3.13列表生成器
 
@@ -698,7 +704,7 @@ for index,num in enumerate(list)
 
 2.嵌套for循环
 
-2018/03/26
+Day05
 
 一、break和continue、pass
 
@@ -974,7 +980,7 @@ for index,key in enumerate(dict1):
 
 	print(index,key)
 
-2018/03/27
+Day06
 
 一、set集合
 
@@ -1216,7 +1222,7 @@ for index,key in enumerate(dict1):
       #startswith()
       #endswith()
 
-2018/03/28
+Day07
 
 一、字符串
 
@@ -1406,7 +1412,7 @@ for index,key in enumerate(dict1):
 
 对于Python语言而言，一个.py文件就相当于一个简单的Python程序，所有的代码默认都在主函数中运行
 
-2018/03/29
+Day08
 
 一、函数的特殊用法
 
@@ -1586,7 +1592,7 @@ Python中只有模块、类以及函数才会引入变量的作用域的问题�
     for i in result:
         print(i)  
 
-2018/03/30
+Day09
 
 一、迭代器
 
@@ -1838,7 +1844,7 @@ queue
     深度优先遍历（栈，先压右节点，再压左节点）
     广度优先遍历二叉树（队列：先压左节点，再压右节点）
 
-2018/04/02
+Day10
 
 一、包
 
@@ -2055,7 +2061,7 @@ func1()
 
 3,.如果不使用第三方模块，则可以执行命令：pip uninstall pillow  ，卸载第三方模块
 
-2018/04/03
+Day11
 
 一、面向对象的思想
 
@@ -2251,7 +2257,7 @@ e.以后在使用的时候，一般选用有参的构造函数结合self来进�
     
     使用情景：对象即将被销毁的时候需要做的一些清理操作，比如：数据库的关闭、文件的关闭
 
-2018/04/04
+Day12
 
 一、属性动态绑定和限制
 
@@ -2261,7 +2267,7 @@ e.以后在使用的时候，一般选用有参的构造函数结合self来进�
     # 2.限制属性的绑定：__slots__
     # 使用tuple来限制需要绑定的属性
     class Customer():
-      __slots__ = ("name", "age")	# 说明只可以动态绑定name和age属性
+      __slots__ = ("name", "age")	# 说明只可以动态绑定name和age属性,此时类中可同时读写的属性也只能有动态绑定的这两个,同时不能绑定类中已声明的属性
 
 二、封装
 
@@ -2443,7 +2449,7 @@ class 子类类名(父类1， 父类2……)
     c = Cat()
     c.fun()
 
-2018/04/08
+Day13
 
 一、多态
 
@@ -2686,7 +2692,7 @@ Python中的模块其实就是单例，因为模块在第一次导入时，会�
     print(id(f1))
     print(id(f2))
 
-2018/04/09
+Day14
 
 一、错误和异常
 
@@ -2997,7 +3003,7 @@ d.关闭文件
     
     myCopy("file11.txt","file22.txt")
 
-2018/04/10
+Day14
 
 一、操作csv文件
 
@@ -3189,7 +3195,7 @@ csv的读取和写入与普通文件不一样
     
     turtle.done()
 
-2018/04/11
+Day15
 
 一、破解密码
 
@@ -3343,7 +3349,7 @@ Regular Expression,在代码中简写regex，re
 
 
 
-2018/04/12
+Day16
 
 一、网络编程
 
@@ -3647,7 +3653,7 @@ User Datagram Protocol，用户数据包协议，提供面向无连接的不可�
     except BaseException as e:
         print(e)
 
-2018/04/13
+Day17
 
 一、反射
 
